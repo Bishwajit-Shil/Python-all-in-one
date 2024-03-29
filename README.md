@@ -1,277 +1,248 @@
-# All of syntax of python in one file
-Anyone can learn from this file and that would be the easy and fastest way to learn python programming. Start learnin...
-All of practice code save in python.ipynb, hi programmer you can practice with this file
 
-<br/>
-<br/>
-###  ARITHMETIC OPERATION
+# Python Basics Documentation
 
-#### Simple Arithmetic
+## 1. Arithmetic Operations
 
-``` python
-a=5
-b=6
-c=a+b
-print(c)
+### Simple Arithmetic
+
+Performing basic arithmetic operations.
+
+```python
+a = 5
+b = 6
+c = a + b
+print(c)  # Output: 11
 ```
 
+### Simple Arithmetic - Get Input from User
 
-``` python
+```python
 a = float(input("Enter the value of a: "))
 b = float(input("Enter the value of b: "))
-add=a+b
+add = a + b
 print(add)
 ```
 
+### Arithmetic Operations with User Input
 
-``` python
+```python
 a = int(input("Enter the value of a: "))
 b = int(input("Enter the value of b: "))
-add=a+b
-sub=a-b
-mult=a*b
-div=a/b
-mod=a%b
-print("ADD:",add)
-print("Sum: {0}, Diff: {1}, Mult: {2}, Div:{3}, Mod:{4}".format(add,sub,mult,div,mod)) #Print using Format
+add = a + b
+sub = a - b
+mult = a * b
+div = a / b
+mod = a % b
+print("ADD:", add)
+print("Sum: {0}, Diff: {1}, Mult: {2}, Div: {3}, Mod: {4}".format(add, sub, mult, div, mod))
 ```
 
+## 2. Strings
 
+### Create String
 
-``` python
-print('{0:<4} | {1:^4} | {2:^4} | {3:>4}'.format('Sum','Diff','Mult','Div'))
-print('{0:<4} | {1:^4} | {2:^4} | {3:>4}'.format(add,sub,mult,div))
-```
+Creating and concatenating strings.
 
-#### Simple Arithmetic - Get input from User (power)
-
-
-``` python
-a=2
-b=3
-power=a**b #Power
-print(power)
-```
-
-##  STRINGS
-
-#### Create String
-
-
-``` python
+```python
 a = 'Python'
 b = "Bootcamp"
-print(a+b)
+print(a + b)  # Output: PythonBootcamp
 ```
 
-#### Length of String
+### Length of String
 
-``` python
-a="Champ"
-print(len(a))
+```python
+a = "Champ"
+print(len(a))  # Output: 5
 ```
 
-``` python
-a="S"
-b=a*5
-print(b)
-```
+### String Indexing
 
-### String Index
-
-``` python
-a="champ"
-print(a[3]) #identifing the element based on index
-print(a[2:]) #Grab the remaing elements except upto the Index
-print(a[:2]) #Grab the elements upto the Index
-print(a[-1]) #Grab the Last element
-print(a[:-1]) #Grab the elements except last element
-print(a[::2]) #Grab everything with 2 steps
-print(a[::-1]) #Print string backwards
+```python
+a = "champ"
+print(a[3])    # Output: m
+print(a[2:])   # Output: amp
+print(a[:2])   # Output: ch
+print(a[-1])   # Output: p
+print(a[:-1])  # Output: cham
+print(a[::2])  # Output: cm
+print(a[::-1]) # Output: pmahc
 ```
 
 ### String Functions
 
-``` python
-a="Master Class"
-print(a.upper()) #Changing to Upper case
-print(a.lower()) #Changing to Lowerb= a.split() case
-```
-#### Splitting String
-
-``` python
-b= a.split() 
+```python
+a = "Master Class"
+print(a.upper())       # Output: MASTER CLASS
+print(a.lower())       # Output: master class
+b = a.split()          # Output: ['Master', 'Class']
 print(b)
-print(b[1]) 
+print(b[1])            # Output: Class
 ```
 
-``` python
-c="ElonMusk,SteveJobs,BillGates"
-d=c.split(",") #Splitting string based on Delimitter
-print(d)
-print(d[1])
-```
-
-``` python
-a="Master Class"
-print(f"Welcome to Python {a} !") #Formatting string Literals
-```
-
-##  LIST
+## 3. Lists
 
 ### Create List
 
-``` python
-a = [1,2,3,4,5]
-b = ["Champ",21,99.5]
-print(a,b)
-print(len(b)) #Length of List
-print(b[0]) #Locate list element based on Index
-print(a[1:]) #print elements except 1st
-print(a[:2]) #Print elements upto 2nd element
-print(a+b) #Concatenate 2 list
+Creating lists and performing basic operations on them.
+
+```python
+a = [1, 2, 3, 4, 5]
+b = ["Champ", 21, 99.5]
+print(a, b)
+print(len(b))          # Output: 3
+print(b[0])            # Output: Champ
+print(a[1:])           # Output: [2, 3, 4, 5]
+print(a[:2])           # Output: [1, 2]
+print(a + b)           # Output: [1, 2, 3, 4, 5, 'Champ', 21, 99.5]
 ```
 
-``` python
-a = [1,2,3,4,5]
-a.append(6) #inserting new elements to the existing list
-print(a)
+### List Operations
+
+```python
+a = [1, 2, 3, 4, 5]
+a.append(6)            # Output: [1, 2, 3, 4, 5, 6]
+a.reverse()            # Output: [6, 5, 4, 3, 2, 1]
+print(min(a))          # Output: 1
+print(max(a))          # Output: 6
 ```
 
-``` python
-a = [1,2,3,4,5]
-a.reverse() #Reverse list
-print(a)
-print(min(a)) #Minimum
-print(max(a)) #Maximum 
-```
+### Nested Lists
 
-``` python
-a = [1,2,3,4,5]
-from random import shuffle
-shuffle(a)
-a
-```
-
-``` python
-a=[1,2,3]
-b=[4,5,6]
-c=[a,b] #Nested List Matrix
+```python
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = [a, b]             # Output: [[1, 2, 3], [4, 5, 6]]
 print(c)
-print(c[0]) #Printing row
-print(c[0][0]) #Printing 1st element 
+print(c[0])            # Output: [1, 2, 3]
+print(c[0][0])         # Output: 1
 ```
 
-##  DICTIONARIES
+## 4. Dictionaries
 
-### Creating Dictionary : Key & Value
+### Creating Dictionary: Key & Value
 
-``` python
-a = {"Name":"Elon","Age":50,"Company":["SpaceX","Tesla"]}
-a
+```python
+a = {"Name": "Elon", "Age": 50, "Company": ["SpaceX", "Tesla"]}
+print(a)
+print(a["Name"])       # Output: Elon
+a["Age"] = 51          # Changing values
+print(a)
 ```
 
-``` python
-a = {"Name":"Elon","Age":50,"Company":["SpaceX","Tesla"]}
-print(a["Name"]) #Printing value based on its Key
-a["Age"]= 51 #Changing values
-a
+### Accessing Dictionary Items
+
+```python
+b = {"Climate": {"Condition": {"Temperature": "38 Degree", "Humidity": "70 Percentage"}}}
+print(b["Climate"]["Condition"]["Humidity"])  # Output: 70 Percentage
+print(a.keys())       # Output: dict_keys(['Name', 'Age', 'Company'])
+print(a.values())     # Output: dict_values(['Elon', 51, ['SpaceX', 'Tesla']])
+print(a.items())      # Output: dict_items([('Name', 'Elon'), ('Age', 51), ('Company', ['SpaceX', 'Tesla'])])
 ```
 
-``` python
-b={"Climate":{"Condition":{"Temperature":"38 Degree","Humidity":"70 Percentage"}}}
-print(b["Climate"]["Condition"]["Humidity"])
+## 5. Tuples
+
+### Creating Tuples
+
+```python
+a = ("Champ", 21, 99.5)
+print(a)              # Output: ('Champ', 21, 99.5)
+print(len(a))         # Output: 3
+print(a[0])           # Output: Champ
+print(a.index("Champ"))  # Output: 0
 ```
 
-``` python
-print(a.keys()) #Printing Keys of the Dictionaries
-print(a.values()) #Printing Values of the Dictionaries
-print(a.items()) #Printing Tuple of the all items
+## 6. Sets
+
+### Creating Set
+
+```python
+a = set()
+a.add("Champ")
+print(a)              # Output: {'Champ'}
+a.add(30)
+print(a)              # Output: {'Champ', 30}
 ```
 
-## Practice Project - Extracting Prime no. {#practice-project---extracting-prime-no}
+## 7. Boolean
 
-``` python
-def check(numbers):
-    primeNumber = []
-    for number in numbers:
-      if number>1:
-        for i in range(2, int(number/2)+1):
-          if (number % i) == 0:#If number is divisible by any number between 2 and number / 2, it is not prime
-              print(number, "is not a prime number")
-              break
-        else:
-          print(number, "is a prime number")
-          primeNumber.append(number)
-      else:
-        pass
-    return primeNumber
+### Creating Boolean
+
+```python
+a = True
+print(a)              # Output: True
 ```
 
-``` python
-check([2,3,4,5,6,7,8,9])
+### Boolean Operations
+
+```python
+a = 10
+b = 5
+c = 15
+print(a > b)          # Output: True
+print(a == b)         # Output: False
+print(a != b)         # Output: True
+print(a <= b)         # Output: False
+print(a >= b)         # Output: True
 ```
 
-## Map Function - Map a function to an iterable object {#10-map-function---map-a-function-to-an-iterable-object}
+## 8. Python Statements
 
-``` python
-def cubeFn(num):
-    return num**3
+### If Statement
+
+```python
+a = True
+if a:
+    print("Positive")
+else:
+    print("Negative")
 ```
 
-``` python
-a = [1,2,3,4,5]
-list(map(cubeFn,a))
+### For Loop
+
+```python
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for i in a:
+    print(i)
 ```
 
+### Odd & Even Numbers
 
-### Working with Files
-
-``` python
-f = open("welcome.txt", "r")
-print(f.read())
-f.close()
+```python
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for i in a:
+    if i % 2 == 0:
+        print(i, "Even Number")
+    else:
+        print(i, "Odd Number")
 ```
 
-``` python
-f = open("welcome.txt", "r")
-print(f.read(5))
-f.close()
+### While Loop
+
+```python
+a = 0
+while a < 11:
+    print(a)
+    a += 1
 ```
 
-``` python
-f = open("welcome.txt", "r")
-print(f.readline())
-f.close()
+### Range Function
+
+```python
+for a in range(6):
+    print(a)
 ```
 
-``` python
-f = open("welcome.txt", "r")
-for x in f:
-  print(x)
+### Enumerate Function
+
+```python
+for i, a in enumerate("Hello Champ"):
+    print(i, a)
 ```
 
+### Zip Function
 
-
-### File Handling using Pandas
-
-``` python
-!pip install pandas
-```
-
-``` python
-import pandas as pd
-data = pd.read_csv('data.csv')
-print(data.to_string()) 
-```
-
-``` python
-import pandas as pd
-data = pd.read_csv('data.csv')
-print(data.shape)
-print(data.describe())
-print(data.head(5)) 
-```
-
-
-## Don't waste your time, start learning with python.ipynb file
+```python
+a = ["Name", "Age", "Country"]
+b = ["Champ", 27, "India"]
+print(list(zip(a, b))) 
